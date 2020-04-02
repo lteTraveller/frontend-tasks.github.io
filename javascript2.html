@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 2</title>
+</head>
+<body>
+    <h1>JavaScript Task 2</h1>
+    <p>Please Open Console</p>
+
+<script>
+    let data = [
+        {principal: 2500, time: 1.8},
+        {principal: 1000, time: 5},
+        {principal: 3000, time: 1},
+        {principal: 2000, time: 3}
+    ];
+
+    let interestData = [];
+    function interestCalculator(arrOfObject) {
+       for (let i = 0; i <= arrOfObject.length; i++) {
+            if (arrOfObject[i].principal >= 2500 && (arrOfObject[i].time > 1 && arrOfObject[i].time < 3)) {
+                rate = 3;
+            } else if (arrOfObject[i].principal >= 2500 && arrOfObject[i].time >= 3) {
+                rate = 4;
+            } else if (arrOfObject[i].principal < 2500 || arrOfObject[i].time <= 1) {
+                rate = 2;
+            } else {
+                rate = 1;
+            }
+            interest = (arrOfObject[i].principal * arrOfObject[i].time * rate)/100;
+            arrOfObject[i].rate = rate.valueOf();
+            arrOfObject[i].interest = interest.valueOf();
+            interestData.push(arrOfObject[i]);
+            console.log(interestData);
+            
+       };
+       return "I tried my best, I could have done more? Maybe.";
+    }
+    interestCalculator(data);
+</script>
+</body>
+</html>
