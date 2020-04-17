@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 3</title>
+</head>
+<body>
+    <h1>JavaScript Task 3</h1>
+    <p>Please Open Console</p>
+
+<script>
+    function replace(num) {
+        let sub, subbedNum=[];
+        for (let i = 1; i<= num; i++){
+            if (i%2==0 && (i%3==0) && (i%5==0)){
+                sub = "yu-gi-oh";
+            } else if (i%2==0 &&  (i%3==0)){
+                sub = "yu-gi";
+            } else if (i%2==0 &&  (i%5==0)){
+                sub = "yu-oh";
+            } else if (i%3==0 && (i%5==0)){
+                sub = "gi-oh";
+            } else if (i%2==0){
+                sub = "yu";
+            } else if (i%3==0){
+                sub = "gi";
+            } else if (i%5==0){
+                sub = "oh";
+            } else {
+                sub = i;
+            }
+            subbedNum.push(sub);
+        }
+        console.log(subbedNum);
+        return subbedNum;
+    }
+    replace(100);
+    replace(30);
+</script>
+</body>
+</html>
